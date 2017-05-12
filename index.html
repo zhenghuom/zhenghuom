@@ -20,17 +20,35 @@
            autostart=false loop=true height=100 width=200>-->
     <div class="loop-img">
         <ul>
-            <li><span>1</span><img src="./image/0.jpg" ></li>
-            <li><span>2</span><img src="./image/0.jpg" ></li>
-            <li><span>3</span><img src="./image/0.jpg" ></li>
-            <li><span>4</span><img src="./image/0.jpg" ></li>
-            <li><span>5</span><img src="./image/0.jpg" ></li>
-            <li><span>6</span><img src="./image/0.jpg" ></li>
+            <li><span>0</span><img src="./image/0.jpg" ></li>
+            <li style="display: none"><span>1</span><img class="imageAnimation1" src="./image/0.jpg" ></li>
+            <li style="display: none"><span>2</span><img src="./image/0.jpg" ></li>
+            <li style="display: none"><span>3</span><img src="./image/0.jpg" ></li>
+            <li style="display: none"><span>4</span><img src="./image/0.jpg" ></li>
+            <li style="display: none"><span>5</span><img src="./image/0.jpg" ></li>
         </ul>
     </div>
 
 </div>
+<script>
+    var _ind = 0;
 
+    setInterval(function () {
+        _ind++;
+        if(_ind == $('ul li').length){
+            _ind = 0;
+        }
+        $('ul li img').removeClass();
+        if(_ind % 2 == 0){
+            $('ul li').eq(_ind).addClass('imageAnimation1');
+        }else{
+            $('ul li').eq(_ind).addClass('imageAnimation2');
+        }
+        $('ul li').hide();
+        $('ul li').eq(_ind).show();
+
+    },5000);
+</script>
 
 </body>
 </html>

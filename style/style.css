@@ -30,41 +30,81 @@
     font-size: 160px;
 
 }
-.loop-img ul li img{
-    -webkit-animation: imageAnimation 10s linear infinite 0s;
-    -moz-animation: imageAnimation 10s linear infinite 0s;
-    -o-animation: imageAnimation 10s linear infinite 0s;
-    -ms-animation: imageAnimation 10s linear infinite 0s;
-    animation: imageAnimation 10s linear infinite 0s;
+.imageAnimation1{
+    -webkit-animation: imageAnimation1 5s linear infinite 0s;
+    -moz-animation: imageAnimation1 5s linear infinite 0s;
+    -o-animation: imageAnimation1 5s linear infinite 0s;
+    -ms-animation: imageAnimation1 5s linear infinite 0s;
+    animation: imageAnimation1 5s linear infinite 0s;
+}
+.imageAnimation2{
+    -webkit-animation: imageAnimation2 5s linear infinite 0s;
+    -moz-animation: imageAnimation2 5s linear infinite 0s;
+    -o-animation: imageAnimation2 5s linear infinite 0s;
+    -ms-animation: imageAnimation2 5s linear infinite 0s;
+    animation: imageAnimation2 5s linear infinite 0s;
+}
+
+.imageAnimation0
+{
+    animation-name:imageAnimation0; /*规定 @keyframes 动画的名称*/
+    animation-duration:5s;  /*规定动画完成一个周期所花费的秒或毫秒*/
+    animation-timing-function:linear; /*规定动画的速度曲线。默认是 "ease"*/
+    animation-delay:2s; /*规定动画何时开始。默认是 0*/
+    animation-iteration-count:infinite; /*规定动画被播放的次数。默认是 1*/
+    animation-direction:alternate;  /*规定动画是否在下一周期逆向地播放。默认是 "normal"*/
+    animation-play-state:running;  /*规定动画是否正在运行或暂停。默认是 "running"*/
+    /* Firefox: */
+    -moz-animation-name:myfirst;
+    -moz-animation-duration:5s;
+    -moz-animation-timing-function:linear;
+    -moz-animation-delay:2s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-direction:alternate;
+    -moz-animation-play-state:running;
+    /* Safari and Chrome: */
+    -webkit-animation-name:myfirst;
+    -webkit-animation-duration:5s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;
+    /* Opera: */
+    -o-animation-name:myfirst;
+    -o-animation-duration:5s;
+    -o-animation-timing-function:linear;
+    -o-animation-delay:2s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-direction:alternate;
+    -o-animation-play-state:running;
 }
 
 
-@-webkit-keyframes imageAnimation {
+/*淡出淡入*/
+@-webkit-keyframes imageAnimation1 {
     0% {
         opacity: 0;
         -webkit-animation-timing-function: ease-in;
     }
-    30% {
-        opacity: 1;
-        -webkit-transform: scale(1.05);
+    25% {
+        opacity: 0.5;
         -webkit-animation-timing-function: ease-out;
     }
     50% {
         opacity: 1;
-        -webkit-transform: scale(1.1) rotate(3deg);
     }
-    70% {
-        opacity: 0;
-        -webkit-transform: scale(1.1) rotate(10deg);
+    75% {
+        opacity: 0.5;
     }
     100% { opacity: 0 }
 }
-@-moz-keyframes imageAnimation {
+@-moz-keyframes imageAnimation1 {
     0% {
         opacity: 0;
         -moz-animation-timing-function: ease-in;
     }
-    30% {
+    25% {
         opacity: 1;
         -moz-transform: scale(1.05);
         -moz-animation-timing-function: ease-out;
@@ -73,18 +113,18 @@
         opacity: 1;
         -moz-transform: scale(1.1) rotate(3deg);
     }
-    70% {
+    75% {
         opacity: 0;
         -moz-transform: scale(1.1) rotate(10deg);
     }
     100% { opacity: 0 }
 }
-@-o-keyframes imageAnimation {
+@-o-keyframes imageAnimation1 {
     0% {
         opacity: 0;
         -o-animation-timing-function: ease-in;
     }
-    30% {
+    25% {
         opacity: 1;
         -o-transform: scale(1.05);
         -o-animation-timing-function: ease-out;
@@ -93,18 +133,18 @@
         opacity: 1;
         -o-transform: scale(1.1) rotate(3deg);
     }
-    70% {
+    75% {
         opacity: 0;
         -o-transform: scale(1.1) rotate(10deg);
     }
     100% { opacity: 0 }
 }
-@-ms-keyframes imageAnimation {
+@-ms-keyframes imageAnimation1 {
     0% {
         opacity: 0;
         -ms-animation-timing-function: ease-in;
     }
-    15% {
+    25% {
         opacity: 1;
         -ms-transform: scale(1.05);
         -ms-animation-timing-function: ease-out;
@@ -113,18 +153,18 @@
         opacity: 1;
         -ms-transform: scale(1.1) rotate(3deg);
     }
-    70% {
+    75% {
         opacity: 0;
         -ms-transform: scale(1.1) rotate(10deg);
     }
     100% { opacity: 0 }
 }
-@keyframes imageAnimation {
+@keyframes imageAnimation1 {
     0% {
         opacity: 0;
         animation-timing-function: ease-in;
     }
-    15% {
+    25% {
         opacity: 1;
         transform: scale(1.05);
         animation-timing-function: ease-out;
@@ -133,9 +173,49 @@
         opacity: 1;
         transform: scale(1.1) rotate(3deg);
     }
-    70% {
+    75% {
         opacity: 0;
         transform: scale(1.5) rotate(10deg);
     }
     100% { opacity: 0 }
 }
+/*淡出淡入，变大变小*/
+
+/*移动*/
+@keyframes imageAnimation2
+{
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px; }
+    50%  {left:200px; top:200px;transform:scale(0.5)}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+
+@-moz-keyframes imageAnimation2 /* Firefox */
+{
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;transform:scale(0.5)}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+
+@-webkit-keyframes imageAnimation2 /* Safari and Chrome */
+{
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;transform:scale(0.5)}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+
+@-o-keyframes imageAnimation2 /* Opera */
+{
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;transform:scale(0.5)}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+/*移动*/
+
