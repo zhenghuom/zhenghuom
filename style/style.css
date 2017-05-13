@@ -30,21 +30,52 @@
     font-size: 160px;
 
 }
-.imageAnimation1{
+.imageAnimation1 img{
+    max-width: 100%;
+    height: auto;
+    text-shadow: 5px 5px 5px #FF0000;
     -webkit-animation: imageAnimation1 5s linear infinite 0s;
     -moz-animation: imageAnimation1 5s linear infinite 0s;
     -o-animation: imageAnimation1 5s linear infinite 0s;
     -ms-animation: imageAnimation1 5s linear infinite 0s;
     animation: imageAnimation1 5s linear infinite 0s;
 }
-.imageAnimation2{
+.imageAnimation2 img{
+    max-width: 100%;
+    height: auto;
     -webkit-animation: imageAnimation2 5s linear infinite 0s;
     -moz-animation: imageAnimation2 5s linear infinite 0s;
     -o-animation: imageAnimation2 5s linear infinite 0s;
     -ms-animation: imageAnimation2 5s linear infinite 0s;
     animation: imageAnimation2 5s linear infinite 0s;
 }
-
+.imageAnimation3 img{
+    max-width: 100%;
+    height: auto;
+    -webkit-animation: imageAnimation3 5s linear infinite 0s;
+    -moz-animation: imageAnimation3 5s linear infinite 0s;
+    -o-animation: imageAnimation3 5s linear infinite 0s;
+    -ms-animation: imageAnimation3 5s linear infinite 0s;
+    animation: imageAnimation3 5s linear infinite 0s;
+}
+.imageAnimation4 img{
+    max-width: 100%;
+    height: auto;
+    -webkit-animation: imageAnimation4 5s linear infinite 0s;
+    -moz-animation: imageAnimation4 5s linear infinite 0s;
+    -o-animation: imageAnimation4 5s linear infinite 0s;
+    -ms-animation: imageAnimation4 5s linear infinite 0s;
+    animation: imageAnimation4 5s linear infinite 0s;
+}
+.imageAnimation5 img{
+    max-width: 100%;
+    height: auto;
+    -webkit-animation: imageAnimation5 5s linear infinite 0s;
+    -moz-animation: imageAnimation5 5s linear infinite 0s;
+    -o-animation: imageAnimation5 5s linear infinite 0s;
+    -ms-animation: imageAnimation5 5s linear infinite 0s;
+    animation: imageAnimation5 5s linear infinite 0s;
+}
 .imageAnimation0
 {
     animation-name:imageAnimation0; /*规定 @keyframes 动画的名称*/
@@ -85,14 +116,13 @@
 @-webkit-keyframes imageAnimation1 {
     0% {
         opacity: 0;
-        -webkit-animation-timing-function: ease-in;
     }
     25% {
         opacity: 0.5;
-        -webkit-animation-timing-function: ease-out;
     }
     50% {
         opacity: 1;
+        -webkit-animation-timing-function: ease-out;
     }
     75% {
         opacity: 0.5;
@@ -218,4 +248,75 @@
     100% {left:0px; top:0px;}
 }
 /*移动*/
+
+/*旋转*/
+@keyframes imageAnimation3
+{
+    50%  {transform: scale(0.1) rotate(360deg);opacity: 0.1;}
+}
+
+@-moz-keyframes imageAnimation3 /* Firefox */
+{
+    50%  {transform: scale(0.1) rotate(360deg);opacity: 0.1;}
+}
+
+@-webkit-keyframes imageAnimation3 /* Safari and Chrome */
+{
+    50%  {transform: scale(0.1) rotate(360deg);opacity: 0.1;}
+}
+
+@-o-keyframes imageAnimation3 /* Opera */
+{
+    50%  {transform: scale(0.1) rotate(360deg);opacity: 0.1;}
+}
+/*旋转*/
+/*倾斜*/
+@keyframes imageAnimation4
+{
+    50%  {transform: skew(90deg,0deg)}
+    100%  {transform: skew(180deg,0deg)}
+}
+
+@-moz-keyframes imageAnimation4 /* Firefox */
+{
+    50%  {transform: skew(90deg,0deg)}
+    100%  {transform: skew(180deg,0deg)}
+}
+
+@-webkit-keyframes imageAnimation4 /* Safari and Chrome */
+{
+    50%  {transform: skew(90deg,0deg)}
+    100%  {transform: skew(180deg,0deg)}
+}
+
+@-o-keyframes imageAnimation4 /* Opera */
+{
+    50%  {transform: skew(90deg,0deg)}
+    100%  {transform: skew(180deg,0deg)}
+}
+/*倾斜*/
+/*圆角*/
+@keyframes imageAnimation5
+{
+    50%  {border-radius: 50%;border: 1px solid #ddd;
+        padding: 5px;}
+    100%  {border-radius: 50%;border: 1px solid #ddd;
+        padding: 5px;}
+}
+
+@-moz-keyframes imageAnimation5 /* Firefox */
+{
+    50%  {border-radius: 50%}
+}
+
+@-webkit-keyframes imageAnimation5 /* Safari and Chrome */
+{
+    50%  {border-radius: 50%}
+}
+
+@-o-keyframes imageAnimation5 /* Opera */
+{
+    50%  {border-radius: 50%}
+}
+/*圆角*/
 
