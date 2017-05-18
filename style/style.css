@@ -319,4 +319,33 @@
     50%  {border-radius: 50%}
 }
 /*圆角*/
+/***************** Cube3 ********************/
+.te-cube3 .te-cube-front{
+    -webkit-transform: scale3d(.858,.858,.858) translate3d(0,0,164px);
+}
+.te-cube3 .te-cube-right{
+    -webkit-transform: scale3d(.858,.858,.858) rotate3d(0,1,0,90deg) translate3d(0,0,164px);
+}
+.te-cube3 .te-cube-left{
+    -webkit-transform: scale3d(.858,.858,.858) rotate3d(0,1,0,-90deg) translate3d(0,0,164px);
+}
+.te-cube3 .te-cube-top{
+    -webkit-transform: scale3d(.858,.858,.858) rotate3d(1,0,0,90deg) translate3d(0,0,164px);
+}
+.te-cube3 .te-cube-bottom{
+    -webkit-transform: scale3d(.858,.858,.858) rotate3d(0,1,0,-90deg) translate3d(0,0,164px);
+}
+.te-cube3.te-show{
+    -webkit-animation: cube3 1s ease-in-out;
+}
+@-webkit-keyframes cube3{
+    0% { -webkit-transform: rotate3d(0,1,0,0); }
+    40% { -webkit-transform: rotate3d(0,1,0,-100deg); }
+    60% { -webkit-transform: rotate3d(0,1,0,-84deg); }
+    80% { -webkit-transform: rotate3d(0,1,0,-90deg); }
+    95% { -webkit-transform: rotate3d(0,1,0,-88deg); }
+    100% { -webkit-transform: rotate3d(0,1,0,-90deg); }
+}
+/***************** Cube4 ********************/
+
 
